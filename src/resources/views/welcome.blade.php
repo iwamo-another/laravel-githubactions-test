@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('adminlte::page')
 
-        <title>Laravel Vue</title>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body>
-        <div id="app"></div>
-    </body>
-</html>
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>ダッシュボード</h1>
+@stop
+
+@section('content')
+    <p>ここがコンテンツ部分です</p>
+@stop
+
+@section('css')
+    {{-- ページごとCSSの指定
+    <link rel="stylesheet" href="/css/xxx.css">
+    --}}
+@stop
+
+@section('js')
+    <script> console.log('ページごとJSの記述'); </script>
+@stop
